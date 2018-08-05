@@ -1,0 +1,18 @@
+select{
+    margin-left: 10px;
+    width: 20%;
+    padding: 3px 0;
+
+    @media(max-width: 992px){
+        width: 30%;
+    }
+
+    @media(max-width: 768px){
+        width: 40%;
+    }
+}
+input {
+    @media (max-width: 380px){
+        width: 40%;
+    }
+}
