@@ -1,6 +1,7 @@
 {
   "name": "redo-react-doc",
   "version": "1.0.0",
+  "main":"service.js",
   "scripts": {
     "client": "cd client && npm start",
     "server": "nodemon service.js",
