@@ -3,7 +3,8 @@ import CurrencyInput from './currency_input';
 import Chart from './chart';
 import {Main_Function} from './js/main.js';
 
-const URL = 'http://localhost:3000/';
+// const URL = 'http://localhost:3000/' || 'https://hauph-cc-app.herokuapp.com/'; 
+const URL = 'https://hauph-cc-app.herokuapp.com/';
 var currency1 = 'AED';
 var currency2 = 'AED';
 var _currencyArray = [];

@@ -5,7 +5,8 @@ export var Main_Function = {
     }
 
     ,secondFetch: function(convertURL) {
-        const convertValueURL = 'http://localhost:3000/get_convert_value';
+        //const convertValueURL = 'http://localhost:3000/get_convert_value';
+        const convertValueURL = 'https://hauph-cc-app.herokuapp.com/get_convert_value';
 
         return fetch(convertValueURL, {
             method: "POST",
