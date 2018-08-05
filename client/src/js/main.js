@@ -27,7 +27,6 @@ export var Main_Function = {
     ,getconvertURL: function(){
         let dateObj = {startDate:"", endDate: ""}
 
-
         let endDate     = new Date()
         let endYear     = endDate.getFullYear(), 
             endMonth    = endDate.getMonth() + 1, 
