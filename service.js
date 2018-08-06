@@ -66,6 +66,7 @@ route.post('/get_convert_value', (req, res)=>{
             request(convertValueURL, function (error, response, _body) {
                 if (!error && response.statusCode == 200) {
                     const dataValue     = JSON.parse(_body);
+                    console.log(dataValue)
                     const arrayValue    = Object.values(dataValue);
                     let convertValue1   = {val: ''};
                     let convertValue2   = {val: ''};
@@ -90,6 +91,7 @@ route.post('/get_convert_value', (req, res)=>{
                     arrayValueReturn.push(dataForChart);
 
                     result = JSON.stringify(arrayValueReturn);
+                    //console.log(result)
                     res.setHeader('Access-Control-Allow-Origin', '*'); 
                     res.write(result);
                     res.end();
