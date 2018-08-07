@@ -63,15 +63,7 @@ class Calculator extends React.Component {
             }
         }
 
-        let convertURL = `https://free.currencyconverterapi.com/api/v6/convert?q=${currency1}_${currency2},${currency2}_${currency1}&compact=ultra&date=${startDate}&endDate=${endDate}`;
-        //SECOND FETCH
-        Main_Function.secondFetch(convertURL).then(response=>{
-            this.setState({
-                convertValue1: response[0].val, 
-                convertValue2: response[1].val,
-                chartArray: response[2]
-            })
-        })
+        this.secondFetchHandle(currency1, currency2)
     }
 
     handle_2nd_SelectChange(currencyName){
@@ -82,15 +74,7 @@ class Calculator extends React.Component {
             }
         }
 
-        let convertURL = `https://free.currencyconverterapi.com/api/v6/convert?q=${currency1}_${currency2},${currency2}_${currency1}&compact=ultra&date=${startDate}&endDate=${endDate}`;
-        //SECOND FETCH
-        Main_Function.secondFetch(convertURL).then(response=>{
-            this.setState({
-                convertValue1: response[0].val, 
-                convertValue2: response[1].val,
-                chartArray: response[2]
-            })
-        })
+        this.secondFetchHandle(currency1, currency2)
     }
 
     handle_1st_InputChange(_value){
@@ -109,19 +93,23 @@ class Calculator extends React.Component {
         const _currencyName1 = this.state.currencyName1;
         const _currencyName2 = this.state.currencyName2;
 
-        if (_currencyName1 !== 'UAE Dirham' && _currencyName2 !== 'UAE Dirham') {
-            for (var i = 0; i < _currencyArray.length; i++) {
-                if(_currencyArray[i].name.indexOf(_currencyName2) > -1) {
-                    currency1 = _currencyArray[i].id;
-                }
+        for (var i = 0; i < _currencyArray.length; i++) {
+            if(_currencyArray[i].name.indexOf(_currencyName2) > -1) {
+                currency1 = _currencyArray[i].id;
             }
-    
-            for (var j = 0; j < _currencyArray.length; j++) {
-                if(_currencyArray[j].name.indexOf(_currencyName1) > -1) {
-                    currency2 = _currencyArray[j].id;
-                }
+        }
+
+        for (var j = 0; j < _currencyArray.length; j++) {
+            if(_currencyArray[j].name.indexOf(_currencyName1) > -1) {
+                currency2 = _currencyArray[j].id;
             }
-    
+        }
+        
+        this.secondFetchHandle(currency1, currency2)
+    }
+
+    secondFetchHandle(currency1, currency2) {
+        if(currency1 !== currency2 ) {
             let convertURL = `https://free.currencyconverterapi.com/api/v6/convert?q=${currency1}_${currency2},${currency2}_${currency1}&compact=ultra&date=${startDate}&endDate=${endDate}`;
             //SECOND FETCH
             Main_Function.secondFetch(convertURL).then(response=>{
