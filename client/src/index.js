@@ -15,10 +15,10 @@ class App extends React.Component {
             <div className="container">
                 <Calculator />
                 <div className="row">
-                    <div className="col-md-6 col-12 col-sm-12">
+                    <div className="col-md-6 col-12 col-sm-12 text-center">
                         <a href="https://github.com/hauph/full-source-currency-converter-app">View Source</a>
                     </div>
-                    <div className="col-md-6 col-12 col-sm-12 text-right">
+                    <div className="col-md-6 col-12 col-sm-12 text-center">
                         <a href="https://www.currencyconverterapi.com/">Currency API</a>
                     </div>
                 </div>
