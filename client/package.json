@@ -2,7 +2,7 @@
   "name": "currency-converter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hauph.github.io/currency-converter",
+  "homepage": "http://hauph.github.io/#/currency-converter",
   "dependencies": {
     "bootstrap": "^4.1.1",
     "highcharts": "^6.1.1",

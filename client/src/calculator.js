@@ -49,6 +49,8 @@ class Calculator extends React.Component {
                 currencyName1: data[0].name, 
                 currencyName2: data[0].name
             })
+            const divId = document.getElementById('root');
+            divId.classList.remove("loading")
         })  
         .catch(err => {
             console.log(err);
