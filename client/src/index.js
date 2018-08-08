@@ -16,7 +16,7 @@ class App extends React.Component {
                 <Calculator />
                 <div className="row">
                     <div className="col-md-6 col-12 col-sm-12">
-                        View Source
+                        <a href="https://github.com/hauph/full-source-currency-converter-app">View Source</a>
                     </div>
                     <div className="col-md-6 col-12 col-sm-12 text-right">
                         <a href="https://www.currencyconverterapi.com/">Currency API</a>
