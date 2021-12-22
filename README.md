@@ -1,5 +1,6 @@
 # Currency Converter
-Demo: https://hauph.github.io/currency-converter/
+
+This app has been refactored to Next JS. For new version, please go to https://github.com/hauph/currency-converter-v2
 
 This app was built by React and Express. The plugins, libraries used are as follows:
 
